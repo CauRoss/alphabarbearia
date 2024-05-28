@@ -141,11 +141,11 @@
             text: 'Serviços'
             md_bg_color: '#403B38'
             text_color: '#A97D56'
-            pos_hint: {'center_x': 0.25, 'center_y': 0.4}
+            pos_hint: {'center_x': 0.25, 'center_y': 0.41}
             size_hint_x: .2
             elevation:0.5
             on_release: 
-                root.manager.currrent = 'serviços'
+                root.manager.current = 'serviços'
                 root.manager.transition.direction = 'left'
         MDFillRoundFlatButton:
             text: 'Barbeiros'
@@ -155,17 +155,17 @@
             size_hint_x: .2
             elevation:0.5
             on_release: 
-                root.manager.currrent = 'barbeiros'
+                root.manager.current = 'barbeiros'
                 root.manager.transition.direction = 'left'
         MDFillRoundFlatButton:
             text: 'Agendar'
             md_bg_color: '#403B38'
             text_color: '#A97D56'
-            pos_hint: {'center_x': 0.25, 'center_y': 0.08}
+            pos_hint: {'center_x': 0.25, 'center_y': 0.09}
             size_hint_x: .2
             elevation:0.5
             on_release: 
-                root.manager.currrent = 'agendamento'
+                root.manager.current = 'agendamento'
                 root.manager.transition.direction = 'left'
         MDFillRoundFlatButton:
             text: 'Localização'
@@ -175,7 +175,7 @@
             size_hint_x: .2
             elevation:0.5
             on_release: 
-                root.manager.currrent = 'localização'
+                root.manager.current = 'localização'
                 root.manager.transition.direction = 'left'
 
 <Servicos>:
@@ -192,14 +192,15 @@
         MDIconButton:
             icon: 'arrow-left'
             theme_text_color: 'Custom'
-            text_color: (0, 128, 128)
+            text_color: 1, 1, 1, 1
             pos_hint: {'center_x': 0.05, 'center_y': 0.97}
             on_release: 
                 root.manager.current = 'tela principal'
                 root.manager.transition.direction = 'right'
+
 <Localizacao>:
     name: 'localização'
-    MDFloatLayout:
+    FloatLayout:
         MDCard:
             style: 'filled'
             size_hint: (1, 1)    
@@ -211,15 +212,16 @@
         MDIconButton:
             icon: 'arrow-left'
             theme_text_color: 'Custom'
-            text_color: (0, 128, 128)
+            text_color: 1, 1, 1, 1
             pos_hint: {'center_x': 0.05, 'center_y': 0.97}
             on_release: 
                 root.manager.current = 'tela principal'
                 root.manager.transition.direction = 'right'
 
+
 <Barbeiros>:
     name: 'barbeiros'
-    MDFloatLayout:
+    FloatLayout:
         MDCard:
             style: 'filled'
             size_hint: (1, 1)    
@@ -231,7 +233,7 @@
         MDIconButton:
             icon: 'arrow-left'
             theme_text_color: 'Custom'
-            text_color: (0, 128, 128)
+            text_color: 1, 1, 1, 1
             pos_hint: {'center_x': 0.05, 'center_y': 0.97}
             on_release: 
                 root.manager.current = 'tela principal'
@@ -239,7 +241,7 @@
 
 <Agendamento>:
     name: 'agendamento'
-    MDFloatLayout:
+    FloatLayout:
         MDCard:
             style: 'filled'
             size_hint: (1, 1)    
@@ -251,7 +253,7 @@
         MDIconButton:
             icon: 'arrow-left'
             theme_text_color: 'Custom'
-            text_color: (0, 128, 128)
+            text_color: 1, 1, 1, 1
             pos_hint: {'center_x': 0.05, 'center_y': 0.97}
             on_release: 
                 root.manager.current = 'tela principal'
@@ -260,5 +262,5 @@
             text: 'Selecione'
             md_bg_color: '#403B38'
             text_color: '#A97D56'
-            pos_hint: {'center_x': 0.2, 'center_y': 0.65}
-            size_hint_x: .8
+            pos_hint: {'center_x': 0.32, 'center_y': 0.58}
+            size_hint_x: .6
